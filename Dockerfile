@@ -23,6 +23,4 @@ WORKDIR /app/
 
 RUN mvn package
 
-EXPOSE  8080
-
 CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","target/spring-boot-sample-tomcat-2.1.3.RELEASE.jar"]
