@@ -62,7 +62,7 @@ return "objects is saved!!!";
 
 
 @GetMapping("/all")
-public ResponseEntity<Teacher> getalldata(){
+public ResponseEntity<Classes> getalldata(){
     Iterable<Classes> fromdatabase=classesInterface.findAll();
 
 
