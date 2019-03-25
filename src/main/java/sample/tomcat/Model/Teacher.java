@@ -70,9 +70,12 @@ private String Profession;
 
     @Override
     public String toString() {
-
-
-        return Name;
-
+        return "Teacher{" +
+                "Id=" + Id +
+                ", Name='" + Name + '\'' +
+                ", Age=" + Age +
+                ", Profession='" + Profession + '\'' +
+                ", ClassesList=" + ClassesList +
+                '}';
     }
 }
