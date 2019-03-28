@@ -94,16 +94,16 @@ loginInterface.save(login);
 return new ResponseEntity(HttpStatus.OK);
 }
 
-@GetMapping("loginvalidation")
+@GetMapping("/loginvalidation")
 public ResponseEntity<Logins> uservalidation(@RequestParam( name="username") String username, @RequestParam(name = "password") String password){
     Optional<Logins> user=loginInterface.findByUsernameAndPassword(username,password);
 
     if(!user.isPresent()){
-        return new  ResponseEntity(HttpStatus.FORBIDDEN);
+        return new  ResponseEntity("password_forbidden",HttpStatus.FORBIDDEN);
 
     }
 
-    return new ResponseEntity(HttpStatus.ACCEPTED);
+    return new ResponseEntity("password_ok",HttpStatus.ACCEPTED);
 
 }
 
